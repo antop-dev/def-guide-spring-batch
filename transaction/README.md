@@ -1,5 +1,7 @@
+# 6장. 잡 실행하기 예제
+
 아래와 같이 3개의 스텝으로 구성된 잡을 학습한다.
 
-![](https://i.imgur.com/oZNsMjW.png)
+![](./assets/transaction.png)
 
 ※ 데이터베이스는 H2를 사용했다.
