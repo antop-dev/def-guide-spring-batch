@@ -1,7 +1,6 @@
 package com.example.itemreader.file
 
-import com.example.itemreader.multirecord.MultiRecordConfiguration
-import com.example.itemreader.multiresource.MultiResourceConfiguration
+import com.example.itemreader.file.multiresource.MultiResourceConfiguration
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.Matchers.`is`
 import org.junit.jupiter.api.Test

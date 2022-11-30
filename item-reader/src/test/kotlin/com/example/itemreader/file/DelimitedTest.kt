@@ -1,6 +1,6 @@
 package com.example.itemreader.file
 
-import com.example.itemreader.delimited.DelimitedConfiguration
+import com.example.itemreader.file.delimited.DelimitedConfiguration
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.Matchers.`is`
 import org.junit.jupiter.api.Test

@@ -1,6 +1,6 @@
 package com.example.itemreader.file
 
-import com.example.itemreader.multiformat.MultiFormatConfiguration
+import com.example.itemreader.file.multiformat.MultiFormatConfiguration
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.Matchers.`is`
 import org.junit.jupiter.api.Test
