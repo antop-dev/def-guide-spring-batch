@@ -30,6 +30,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.springframework:spring-oxm")
     implementation("com.sun.xml.bind:jaxb-impl:2.3.7")
+    implementation("com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.8.1")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("com.h2database:h2:2.1.214")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
