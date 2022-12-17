@@ -1,4 +1,4 @@
-package com.example.itemreader.database.jdbc.cursor
+package com.example.itemreader.database.jdbc
 
 import org.springframework.jdbc.core.RowMapper
 import java.sql.ResultSet

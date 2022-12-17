@@ -1,4 +1,4 @@
-package com.example.itemreader.database.jdbc.cursor
+package com.example.itemreader.database.jdbc
 
 data class Customer(
     val id: Long,

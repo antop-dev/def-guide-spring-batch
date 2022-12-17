@@ -1,4 +1,4 @@
-package com.example.itemreader.database.jdbc.paging
+package com.example.itemreader.database.jdbc
 
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory
