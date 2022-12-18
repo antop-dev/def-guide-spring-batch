@@ -9,18 +9,16 @@ import org.springframework.batch.core.configuration.annotation.EnableBatchProces
 import org.springframework.batch.test.JobLauncherTestUtils
 import org.springframework.batch.test.context.SpringBatchTest
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration
+import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.ActiveProfiles
-import org.springframework.test.context.ContextConfiguration
 import org.springframework.test.context.TestConstructor
-import org.springframework.test.context.jdbc.Sql
 
 @ActiveProfiles("test")
+@SpringBootTest(classes = [JdbcCursorConfiguration::class])
 @SpringBatchTest
 @EnableBatchProcessing
 @EnableAutoConfiguration
-@ContextConfiguration(classes = [JdbcCursorConfiguration::class])
 @TestConstructor(autowireMode = TestConstructor.AutowireMode.ALL)
-@Sql(scripts = ["classpath:schema-h2.sql", "classpath:data-h2.sql"])
 class JdbcCursorItemReaderTest(private val jobLauncherTestUtils: JobLauncherTestUtils) {
     @Test
     fun testJob() {
