@@ -1,6 +1,6 @@
 package com.example.itemreader.jdbc
 
-import com.example.itemreader.database.jdbc.cursor.JdbcCursorConfiguration
+import com.example.itemreader.database.jdbc.JdbcCursorConfiguration
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.Matchers.`is`
 import org.junit.jupiter.api.Test

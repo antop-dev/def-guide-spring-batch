@@ -1,6 +1,6 @@
 package com.example.itemreader.jdbc
 
-import com.example.itemreader.database.jdbc.paging.JdbcPagingConfiguration
+import com.example.itemreader.database.jdbc.JdbcPagingConfiguration
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.Matchers.`is`
 import org.junit.jupiter.api.Test
