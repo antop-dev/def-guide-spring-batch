@@ -10,15 +10,16 @@ import org.springframework.batch.core.configuration.annotation.EnableBatchProces
 import org.springframework.batch.test.JobLauncherTestUtils
 import org.springframework.batch.test.context.SpringBatchTest
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration
+import org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration
+import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.ActiveProfiles
-import org.springframework.test.context.ContextConfiguration
 import org.springframework.test.context.TestConstructor
 
 @ActiveProfiles("test")
 @SpringBatchTest
+@SpringBootTest(classes = [XmlConfiguration::class])
 @EnableBatchProcessing
-@EnableAutoConfiguration
-@ContextConfiguration(classes = [XmlConfiguration::class])
+@EnableAutoConfiguration(exclude = [SqlInitializationAutoConfiguration::class])
 @TestConstructor(autowireMode = TestConstructor.AutowireMode.ALL)
 class XmlTest(private val jobLauncherTestUtils: JobLauncherTestUtils) {
     @Test

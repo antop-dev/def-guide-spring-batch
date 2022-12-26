@@ -11,6 +11,7 @@ import org.springframework.batch.test.JobLauncherTestUtils
 import org.springframework.batch.test.context.SpringBatchTest
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration
 import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.test.annotation.DirtiesContext
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.context.TestConstructor
 
@@ -20,6 +21,7 @@ import org.springframework.test.context.TestConstructor
 @EnableBatchProcessing
 @EnableAutoConfiguration
 @TestConstructor(autowireMode = TestConstructor.AutowireMode.ALL)
+@DirtiesContext
 class JdbcPagingItemReaderTest(private val jobLauncherTestUtils: JobLauncherTestUtils) {
     @Test
     fun testJob() {

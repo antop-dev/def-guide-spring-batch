@@ -12,6 +12,7 @@ import org.springframework.batch.test.context.SpringBatchTest
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration
 import org.springframework.boot.autoconfigure.domain.EntityScan
 import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.test.annotation.DirtiesContext
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.context.TestConstructor
 
@@ -22,6 +23,7 @@ import org.springframework.test.context.TestConstructor
 @EnableAutoConfiguration
 @EntityScan("com.example.itemreader.database.jpa")
 @TestConstructor(autowireMode = TestConstructor.AutowireMode.ALL)
+@DirtiesContext
 class HibernatePagingItemReaderTest(private val jobLauncherTestUtils: JobLauncherTestUtils) {
     @Test
     fun testJob() {

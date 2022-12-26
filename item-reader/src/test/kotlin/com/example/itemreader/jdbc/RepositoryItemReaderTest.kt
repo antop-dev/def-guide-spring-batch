@@ -13,17 +13,19 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration
 import org.springframework.boot.autoconfigure.domain.EntityScan
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories
+import org.springframework.test.annotation.DirtiesContext
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.context.TestConstructor
 
 @ActiveProfiles("test")
-@SpringBootTest(classes = [RepositoryJob::class])
 @SpringBatchTest
+@SpringBootTest(classes = [RepositoryJob::class])
 @EnableBatchProcessing
 @EnableAutoConfiguration
 @EnableJpaRepositories(basePackages = ["com.example.itemreader.database.jpa"])
 @EntityScan("com.example.itemreader.database.jpa")
 @TestConstructor(autowireMode = TestConstructor.AutowireMode.ALL)
+@DirtiesContext
 class RepositoryItemReaderTest(private val jobLauncherTestUtils: JobLauncherTestUtils) {
     @Test
     fun testJob() {
