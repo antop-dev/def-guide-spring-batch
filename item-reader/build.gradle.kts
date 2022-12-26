@@ -24,6 +24,7 @@ repositories {
 }
 
 dependencies {
+    implementation("org.springframework.boot:spring-boot-starter-logging")
     implementation("org.springframework.boot:spring-boot-starter-batch")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
@@ -37,7 +38,9 @@ dependencies {
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("org.springframework.batch:spring-batch-test")
+    testImplementation("org.springframework.batch:spring-batch-test") {
+        exclude(group = "junit", module = "junit")
+    }
     testImplementation("com.h2database:h2:2.1.214")
     testImplementation("de.flapdoodle.embed:de.flapdoodle.embed.mongo.spring27x:4.3.2")
 }
