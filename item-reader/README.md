@@ -1,11 +1,38 @@
 # ItemReader
 
-### org.springframework.batch.item.file.FlatFileItemReader
+### ItemReader 인터페이스
 
-고정너비, 구분자로 나워진 파일을 읽어들인다.
+[Appendix A: List of ItemReaders and ItemWriters](https://docs.spring.io/spring-batch/docs/current/reference/html/appendix.html#itemReadersAppendix)
 
-* org.springframework.batch.item.file.transform.LineTokenizer : 라인 파싱 → FieldSet 커스터마이징
-* org.springframework.batch.item.file.mapping.FieldSetMapper : FieldSet → <T> 커스터마이징
-* org.springframework.batch.item.file.mapping.PatternMatchingCompositeLineMapper : 여러 종류의 포멧을 처리할 때 사용
-* 제어 중지 로직<sup>`control break logic`</sup> 사용하기
-* org.springframework.batch.item.file.MultiResourceItemReader : 여러 파일을 읽어서 처리
+### 파일 입력
+
+* FlatFileItemReader
+* StaxEventItemReader
+
+### JSON
+
+* JsonItemReader
+
+### 데이터베이스 입력
+
+* JdbcCursorItemReader
+* JdbcPagingItemReader
+* HibernateCursorItemReader
+* HibernatePagingItemReader
+* MongoItemReader
+* RepositoryItemReader
+
+### 기존 서비스
+
+* ItemReaderAdapter
+
+### 커스텀 입력
+
+* ItemReader 직접 구현
+* ItemStream `open`, `update`, `close`
+
+### 에러 처리
+
+* 스탭 빌드 시에 저장한 예외와 스킵 타운트 설정
+* ItemReadListener, `@OnReadError`
+* StepListener, `@AfterStep`
